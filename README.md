@@ -35,7 +35,7 @@ A Model Context Protocol (MCP) server implementation for YouTube, enabling AI la
 
 1. Install the package:
 ```bash
-npm install -g zubeid-youtube-mcp-server
+npm install -g pp-youtube-mcp-server
 ```
 
 2. Add to your Claude Desktop configuration (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS or `%APPDATA%\Claude\claude_desktop_config.json` on Windows):
@@ -43,8 +43,8 @@ npm install -g zubeid-youtube-mcp-server
 ```json
 {
   "mcpServers": {
-    "zubeid-youtube-mcp-server": {
-      "command": "zubeid-youtube-mcp-server",
+    "pp-youtube-mcp-server": {
+      "command": "pp-youtube-mcp-server",
       "env": {
         "YOUTUBE_API_KEY": "your_youtube_api_key_here"
       }
@@ -62,7 +62,7 @@ Add this to your Claude Desktop configuration:
   "mcpServers": {
     "youtube": {
       "command": "npx",
-      "args": ["-y", "zubeid-youtube-mcp-server"],
+      "args": ["-y", "pp-youtube-mcp-server"],
       "env": {
         "YOUTUBE_API_KEY": "your_youtube_api_key_here"
       }
@@ -75,21 +75,13 @@ Add this to your Claude Desktop configuration:
 
 To install YouTube MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@ZubeidHendricks/youtube):
 
-```bash
-npx -y @smithery/cli install @ZubeidHendricks/youtube --client claude
-```
 
 ## Configuration
 Set the following environment variables:
 * `YOUTUBE_API_KEY`: Your YouTube Data API key (required)
 * `YOUTUBE_TRANSCRIPT_LANG`: Default language for transcripts (optional, defaults to 'en')
-### Using with VS Code
 
-For one-click installation, click one of the install buttons below:
-
-[![Install with NPX in VS Code](https://img.shields.io/badge/VS_Code-NPM-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=youtube&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22zubeid-youtube-mcp-server%22%5D%2C%22env%22%3A%7B%22YOUTUBE_API_KEY%22%3A%22%24%7Binput%3AapiKey%7D%22%7D%7D&inputs=%5B%7B%22type%22%3A%22promptString%22%2C%22id%22%3A%22apiKey%22%2C%22description%22%3A%22YouTube+API+Key%22%2C%22password%22%3Atrue%7D%5D) [![Install with NPX in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-NPM-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=youtube&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22zubeid-youtube-mcp-server%22%5D%2C%22env%22%3A%7B%22YOUTUBE_API_KEY%22%3A%22%24%7Binput%3AapiKey%7D%22%7D%7D&inputs=%5B%7B%22type%22%3A%22promptString%22%2C%22id%22%3A%22apiKey%22%2C%22description%22%3A%22YouTube+API+Key%22%2C%22password%22%3Atrue%7D%5D&quality=insiders)
-
-### Manual Installation
+### Manual Installation for VSCode
 
 If you prefer manual installation, first check the install buttons at the top of this section. Otherwise, follow these steps:
 
@@ -109,7 +101,7 @@ Add the following JSON block to your User Settings (JSON) file in VS Code. You c
     "servers": {
       "youtube": {
         "command": "npx",
-        "args": ["-y", "zubeid-youtube-mcp-server"],
+        "args": ["-y", "pp-youtube-mcp-server"],
         "env": {
           "YOUTUBE_API_KEY": "${input:apiKey}"
         }
@@ -134,7 +126,7 @@ Optionally, you can add it to a file called `.vscode/mcp.json` in your workspace
   "servers": {
     "youtube": {
       "command": "npx",
-      "args": ["-y", "zubeid-youtube-mcp-server"],
+      "args": ["-y", "pp-youtube-mcp-server"],
       "env": {
         "YOUTUBE_API_KEY": "${input:apiKey}"
       }
