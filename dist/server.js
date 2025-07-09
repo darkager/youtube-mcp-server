@@ -7,7 +7,7 @@ import { PlaylistService } from './services/playlist.js';
 import { ChannelService } from './services/channel.js';
 export async function startMcpServer() {
     const server = new Server({
-        name: 'zubeid-youtube-mcp-server',
+        name: 'pp-youtube-mcp-server',
         version: '1.0.0',
     }, {
         capabilities: {
